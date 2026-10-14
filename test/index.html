@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lap timer tests</title>
+<style>
+  :root { color-scheme: dark; --bg: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --good: #0ca30c; --bad: #d03b3b; }
+  body { margin: 0; padding: 16px; background: var(--bg); color: var(--ink); font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  h2 { font-size: 15px; margin: 18px 0 6px; color: var(--ink2); }
+  #summary { font-size: 18px; font-weight: 600; margin: 8px 0 12px; }
+  #summary.ok::before { content: "\2714  "; color: var(--good); }
+  #summary.bad::before { content: "\2716  "; color: var(--bad); }
+  .row { display: grid; grid-template-columns: 52px 1fr; gap: 2px 10px; padding: 6px 8px; background: var(--surface); border-radius: 6px; margin: 4px 0; }
+  .mark { font-weight: 700; font-size: 12px; }
+  .row.ok .mark { color: var(--good); }
+  .row.bad .mark { color: var(--bad); }
+  .row.skip .mark { color: var(--muted); }
+  .detail { grid-column: 2; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  pre { white-space: pre-wrap; word-break: break-word; background: var(--surface); padding: 10px; border-radius: 6px; color: var(--ink2); font-size: 11px; }
+</style>
+</head>
+<body>
+<h1>Lap timer test suite</h1>
+<p style="color:var(--muted)">Synthetic courses with known lap times, file-format checks, and a replay of a real recorded session when that file and its expected results are present in <code>data/</code> (never published).</p>
+<div id="summary">Running...</div>
+<div id="out"></div>
+<h2>Numbers</h2>
+<pre id="json"></pre>
+<script type="module" src="tests.js"></script>
+</body>
+</html>

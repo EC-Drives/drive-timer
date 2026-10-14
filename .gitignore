@@ -1,0 +1,16 @@
+# Recorded sessions and anything derived from them stay on the laptop, never in git.
+data/
+session_*.csv
+*.session.csv
+library_*.json
+drive-timer-library-*.json
+
+# Screenshots show EC's own lap data: keep them out of the public repo
+screenshots/
+
+# Local clutter
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
